@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sales_force" showInDefault="1" showInWebsite="0" showInStore="1" sortOrder="40" translate="label">
+            <class>separator-top</class>
+            <label>Salesforce Transactional Email</label>
+            <tab>bluebottle</tab>
+            <resource>Bluebottle_SalesForce::configuration</resource>
+            <group id="configuration" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="0"
+                   showInStore="1">
+                <label>Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Send email by Salesforce</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="queue_enabled" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Queue</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment><![CDATA[Send email by Queue if Yes or send direct message if No]]></comment>
+                </field>
+            </group>
+            <group id="integrate" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="0"
+                   showInStore="1">
+                <label>Integrate</label>
+                <field id="url_api" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>URL API</label>
+                </field>
+                <field id="token" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Token</label>
+                </field>
+            </group>
+
+            <group id="order" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="0"
+                   showInStore="1">
+                <label>Order</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable Order Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="definition_key" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Definition Key</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

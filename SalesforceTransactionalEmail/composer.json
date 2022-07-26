@@ -1,0 +1,21 @@
+{
+  "name": "bluebottle/module-sales-force-transactional-email",
+  "version": "1.0.0",
+  "description": "a magento 2 module will help send email via salesforce",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "php": ">=7.4.0"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Bluebottle\\SalesforceTransactionalEmail\\": ""
+    }
+  }
+}

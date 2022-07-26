@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin   -->
+    <type name="\Magento\Framework\Mail\Template\TransportBuilder">
+        <plugin name="send_email_by_sale_force" sortOrder="1"
+                type="Bluebottle\SalesforceTransactionalEmail\Plugin\Magento\Framework\TransportBuilder" disabled="false"/>
+    </type>
+
+    <!-- Salesforce Log   -->
+    <type name="Bluebottle\SalesforceTransactionalEmail\Logger\SalesForceLogHandler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Bluebottle\SalesforceTransactionalEmail\Logger\SalesForce">
+        <arguments>
+            <argument name="name" xsi:type="string">saleForceLogger</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Bluebottle\SalesforceTransactionalEmail\Logger\SalesForceLogHandler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
