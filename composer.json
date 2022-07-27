@@ -1,8 +1,9 @@
 {
   "name": "bluebottle/module-salesforce-transactional-email",
-  "version": "0.1.0",
   "description": "a magento 2 module will help send email via salesforce",
   "type": "magento2-module",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "keywords": [
     "bluebottle",
     "salesforce",
@@ -30,7 +31,5 @@
     "psr-4": {
       "Bluebottle\\SalesforceTransactionalEmail\\": ""
     }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }
