@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "description": "a magento 2 module will help send email via salesforce",
   "type": "magento2-module",
+  "keywords": [
+    "bluebottle",
+    "salesforce",
+    "magento"
+  ],
+  "authors": [
+    {
+      "name": "Khoi Nguyen",
+      "email": "nhkhoi93@gmail.com",
+      "role": "developer"
+    }
+  ],
   "require": {
     "magento/framework": "*",
     "php": ">=7.4.0"
